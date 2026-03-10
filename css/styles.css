@@ -1,16 +1,13 @@
 /* --- Prevent header overlap on all pages --- */
-body > .hero:first-of-type,
-body > .section:first-of-type,
-main,
-.page-content {
+/* --- Standardize header overlap for all pages --- */
+.page-content, main, .hero, .section {
   margin-top: 80px !important;
+  scroll-margin-top: 80px;
 }
 @media (max-width: 700px) {
-  body > .hero:first-of-type,
-  body > .section:first-of-type,
-  main,
-  .page-content {
+  .page-content, main, .hero, .section {
     margin-top: 60px !important;
+    scroll-margin-top: 60px;
   }
 }
 /* ============================================
@@ -53,7 +50,6 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-}
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -127,6 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav.nav-hidden {
   transform: translateY(-100%);
 }
+/* Standard nav layout */
 .nav-inner {
   display: flex;
   flex-direction: row;
@@ -137,15 +134,49 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   padding: 0 24px;
 }
+
+/* About page: center logo and nav */
+body.about .nav-inner {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  padding: 0;
+}
+body.about .nav-logo {
+  margin-bottom: 8px;
+}
+body.about .nav-links {
+  justify-content: center;
+  width: 100%;
+}
+/* Remove box and background from logo everywhere */
 .nav-logo img {
   height: 70px;
   width: auto;
   filter: none;
-  background: none;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   transition: height 0.2s;
+}
+/* About page: center hero text */
+body.about .hero.hero-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50vh;
+  min-height: 400px;
+  padding-top: 40px;
+}
+body.about .hero-page .hero-content {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .nav-links {
   display: flex;
@@ -233,7 +264,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hero, .section {
   margin-top: 0 !important;
-}
 }
 .nav-cta.interactive-cta:hover .cta-btn-arrow {
   transform: translateY(-50%) translateX(0);
@@ -654,7 +684,6 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   aspect-ratio: 4/3;
   cursor: pointer;
-  group: true;
 }
 .project-card img {
   width: 100%; height: 100%;
