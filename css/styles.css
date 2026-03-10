@@ -978,6 +978,54 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
 }
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--white);
+  font-size: 2.5rem;
+  cursor: pointer;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(200, 151, 62, 0.5);
+  border-color: var(--amber);
+}
+.lightbox-counter {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--grey-300);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0.5);
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+.photo-count {
+  display: inline-block;
+  color: var(--grey-300);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 6px;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+}
 
 /* ============================================
    RESPONSIVE
