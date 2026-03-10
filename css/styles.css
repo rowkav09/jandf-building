@@ -200,6 +200,32 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-32px);
   opacity: 0;
 }
+.nav-cta.interactive-cta .cta-btn-arrow {
+  pointer-events: none;
+}
+.nav-cta.interactive-cta:active .cta-btn-text,
+.nav-cta.interactive-cta:focus .cta-btn-text {
+  opacity: 1;
+  transform: none;
+}
+/* --- Prevent header overlap --- */
+main, .hero, .section {
+  scroll-margin-top: 120px;
+}
+body > .hero:first-of-type,
+body > .section:first-of-type {
+  margin-top: 120px;
+}
+@media (max-width: 700px) {
+  main, .hero, .section {
+    scroll-margin-top: 90px;
+  }
+  body > .hero:first-of-type,
+  body > .section:first-of-type {
+    margin-top: 90px;
+  }
+}
+}
 .nav-cta.interactive-cta:hover .cta-btn-arrow {
   transform: translateY(-50%) translateX(0);
   opacity: 1;
