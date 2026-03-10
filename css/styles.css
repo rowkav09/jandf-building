@@ -19,8 +19,8 @@
   --grey-500: #888883;
   --grey-700: #555550;
   --grey-900: #2c2c28;
-  --font-heading: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  --font-body: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'DM Sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   --max-width: 1200px;
   --section-padding: 100px 0;
   --transition: 0.3s ease;
@@ -121,6 +121,10 @@ h1, h2, h3, h4, h5, h6 {
 .nav-logo img {
   height: 50px;
   width: auto;
+  filter: brightness(1.8) contrast(1.1);
+  background: rgba(255,255,255,0.12);
+  padding: 4px 8px;
+  border-radius: 6px;
 }
 .nav-links {
   display: flex;
@@ -450,6 +454,98 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9rem;
   color: var(--grey-500);
   line-height: 1.6;
+}
+
+/* ============================================
+   SERVICES SHOWCASE (image cards)
+   ============================================ */
+.services-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.services-showcase .showcase-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+}
+.services-showcase .showcase-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.services-showcase .showcase-card:hover img {
+  transform: scale(1.06);
+}
+.showcase-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(26,26,26,0.8) 0%, rgba(26,26,26,0.1) 50%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 28px 24px;
+  transition: background 0.4s ease;
+}
+.services-showcase .showcase-card:hover .showcase-card-overlay {
+  background: linear-gradient(0deg, rgba(26,26,26,0.85) 0%, rgba(26,26,26,0.2) 60%, rgba(26,26,26,0.05) 100%);
+}
+.showcase-card-content {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.showcase-card-content h3 {
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 70%;
+}
+.showcase-card-tag {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: var(--amber);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border-left: 2px solid var(--amber);
+  padding-left: 8px;
+  white-space: nowrap;
+}
+.services-showcase .showcase-card-bottom-row {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.services-showcase .showcase-card-bottom-row .showcase-card {
+  aspect-ratio: 16/9;
+}
+
+@media (max-width: 992px) {
+  .services-showcase {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-showcase .showcase-card-bottom-row {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 600px) {
+  .services-showcase {
+    grid-template-columns: 1fr;
+  }
+  .services-showcase .showcase-card-bottom-row {
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+  }
+  .showcase-card-content h3 {
+    font-size: 1.1rem;
+  }
 }
 
 /* ============================================
