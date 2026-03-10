@@ -161,6 +161,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+
 .nav-cta.interactive-cta {
   position: relative;
   display: inline-flex;
@@ -178,50 +179,50 @@ h1, h2, h3, h4, h5, h6 {
   transition: background 0.3s, color 0.3s;
   z-index: 1;
 }
-.nav-cta.interactive-cta .cta-text {
+.nav-cta.interactive-cta .cta-btn-text {
   position: relative;
   z-index: 2;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.35s cubic-bezier(.4,1.7,.7,1.1), opacity 0.3s;
   display: inline-block;
 }
-.nav-cta.interactive-cta .cta-arrow {
+.nav-cta.interactive-cta .cta-btn-arrow {
   position: absolute;
   right: 24px;
   top: 50%;
-  transform: translateY(-50%) translateX(16px);
+  transform: translateY(-50%) translateX(32px);
   opacity: 0;
   z-index: 2;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.35s cubic-bezier(.4,1.7,.7,1.1), opacity 0.3s;
   display: flex;
   align-items: center;
 }
-.nav-cta.interactive-cta:hover .cta-text {
-  transform: translateX(-18px);
+.nav-cta.interactive-cta:hover .cta-btn-text {
+  transform: translateX(-32px);
   opacity: 0;
 }
-.nav-cta.interactive-cta:hover .cta-arrow {
+.nav-cta.interactive-cta:hover .cta-btn-arrow {
   transform: translateY(-50%) translateX(0);
   opacity: 1;
 }
-.nav-cta.interactive-cta .cta-bg {
+.nav-cta.interactive-cta .cta-btn-bg {
   position: absolute;
   left: 60%;
   top: 50%;
   width: 2px;
   height: 2px;
   background: var(--charcoal);
-  border-radius: 50%;
+  border-radius: 12px;
   z-index: 1;
   transform: translate(-50%, -50%) scale(1);
-  transition: all 0.3s cubic-bezier(.4,1.7,.7,1.1);
-  opacity: 0.08;
+  transition: all 0.35s cubic-bezier(.4,1.7,.7,1.1);
+  opacity: 0.09;
 }
-.nav-cta.interactive-cta:hover .cta-bg {
+.nav-cta.interactive-cta:hover .cta-btn-bg {
   left: 50%;
   top: 50%;
   width: 200%;
   height: 200%;
-  opacity: 0.13;
+  opacity: 0.15;
   transform: translate(-50%, -50%) scale(1.2);
 }
 .nav-phone {
