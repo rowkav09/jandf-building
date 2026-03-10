@@ -111,13 +111,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav-inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  height: auto;
+  justify-content: space-between;
+  height: 110px;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 24px 24px 0 24px;
+  padding: 0 24px;
 }
 .nav-logo img {
   height: 110px;
@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-top: 8px;
+  margin-top: 0;
 }
 .nav-links a {
   color: var(--grey-300);
