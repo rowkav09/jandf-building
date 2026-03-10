@@ -119,12 +119,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 24px;
 }
 .nav-logo img {
-  height: 50px;
+  height: 70px;
   width: auto;
-  filter: brightness(1.8) contrast(1.1);
-  background: rgba(255,255,255,0.12);
-  padding: 4px 8px;
-  border-radius: 6px;
+  filter: brightness(2.2) contrast(1.2) drop-shadow(0 2px 8px rgba(0,0,0,0.12));
+  background: rgba(255,255,255,0.22);
+  padding: 6px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  transition: height 0.2s, filter 0.2s;
 }
 .nav-links {
   display: flex;
