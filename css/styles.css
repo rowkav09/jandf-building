@@ -34,16 +34,10 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--charcoal);
-  background: var(--charcoal-light);
+  background: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  overflow-y: hidden;
-  scrollbar-width: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 }
 
@@ -215,22 +209,13 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   transform: none;
 }
-/* --- Prevent header overlap --- */
-main, .hero, .section {
-  scroll-margin-top: 120px;
+
+/* --- Prevent header overlap (fix for all pages, no extra white) --- */
+.page-content, main, .hero, .section {
+  scroll-margin-top: 110px;
 }
-body > .hero:first-of-type,
-body > .section:first-of-type {
-  margin-top: 120px;
-}
-@media (max-width: 700px) {
-  main, .hero, .section {
-    scroll-margin-top: 90px;
-  }
-  body > .hero:first-of-type,
-  body > .section:first-of-type {
-    margin-top: 90px;
-  }
+.hero, .section {
+  margin-top: 0 !important;
 }
 }
 .nav-cta.interactive-cta:hover .cta-btn-arrow {
