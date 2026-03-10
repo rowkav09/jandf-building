@@ -34,10 +34,17 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--charcoal);
-  background: var(--white);
+  background: var(--charcoal-light);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -1019,7 +1026,7 @@ body > .section:first-of-type {
   background: var(--amber);
 }
 .footer-social a svg {
-  width: 18px; height: 18px;
+  width: 22px; height: 22px;
   fill: var(--grey-300);
 }
 .footer-social a:hover svg {
