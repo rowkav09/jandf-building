@@ -4,6 +4,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // --- Auto-filter projects by URL param ---
+  if (window.location.pathname.endsWith('projects.html')) {
+    const params = new URLSearchParams(window.location.search);
+    const filterParam = params.get('filter');
+    if (filterParam) {
+      setTimeout(() => {
+        const btn = document.querySelector(`.filter-btn[data-filter="${filterParam}"]`);
+        if (btn) btn.click();
+      }, 10);
+    }
+  }
+
   // --- Scroll-triggered fade-in animations ---
   const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
   const observer = new IntersectionObserver((entries) => {
