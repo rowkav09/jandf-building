@@ -160,17 +160,69 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links a.active::after {
   width: 100%;
 }
-.nav-cta {
+
+.nav-cta.interactive-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 999px;
   background: var(--amber);
   color: var(--charcoal) !important;
-  padding: 10px 24px;
-  border-radius: 4px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.5px;
+  padding: 10px 32px 10px 24px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  z-index: 1;
 }
-.nav-cta::after { display: none !important; }
-.nav-cta:hover {
-  background: var(--amber-light) !important;
+.nav-cta.interactive-cta .cta-text {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s, opacity 0.3s;
+  display: inline-block;
+}
+.nav-cta.interactive-cta .cta-arrow {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%) translateX(16px);
+  opacity: 0;
+  z-index: 2;
+  transition: transform 0.3s, opacity 0.3s;
+  display: flex;
+  align-items: center;
+}
+.nav-cta.interactive-cta:hover .cta-text {
+  transform: translateX(-18px);
+  opacity: 0;
+}
+.nav-cta.interactive-cta:hover .cta-arrow {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+}
+.nav-cta.interactive-cta .cta-bg {
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  width: 2px;
+  height: 2px;
+  background: var(--charcoal);
+  border-radius: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s cubic-bezier(.4,1.7,.7,1.1);
+  opacity: 0.08;
+}
+.nav-cta.interactive-cta:hover .cta-bg {
+  left: 50%;
+  top: 50%;
+  width: 200%;
+  height: 200%;
+  opacity: 0.13;
+  transform: translate(-50%, -50%) scale(1.2);
 }
 .nav-phone {
   display: flex;
