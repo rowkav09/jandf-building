@@ -34,8 +34,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Navbar scroll effect ---
   const nav = document.querySelector('.nav');
   if (nav) {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
     window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          nav.classList.toggle('scrolled', currentScrollY > 60);
+          if (currentScrollY > lastScrollY && currentScrollY > 120) {
+            nav.classList.add('nav-hidden');
+          } else {
+            nav.classList.remove('nav-hidden');
+          }
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
     }, { passive: true });
   }
 

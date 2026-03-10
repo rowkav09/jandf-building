@@ -1,3 +1,18 @@
+/* --- Prevent header overlap on all pages --- */
+body > .hero:first-of-type,
+body > .section:first-of-type,
+main,
+.page-content {
+  margin-top: 80px !important;
+}
+@media (max-width: 700px) {
+  body > .hero:first-of-type,
+  body > .section:first-of-type,
+  main,
+  .page-content {
+    margin-top: 60px !important;
+  }
+}
 /* ============================================
    J&F Building — Site Styles
    ============================================ */
@@ -101,27 +116,29 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(26, 26, 26, 0.95);
+  background: rgb(50, 50, 50);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  transition: background var(--transition), box-shadow var(--transition);
+  transition: transform 0.35s ease, box-shadow var(--transition);
 }
 .nav.scrolled {
-  background: rgba(26, 26, 26, 0.98);
   box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.nav.nav-hidden {
+  transform: translateY(-100%);
 }
 .nav-inner {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 110px;
+  height: 80px;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
 }
 .nav-logo img {
-  height: 110px;
+  height: 70px;
   width: auto;
   filter: none;
   background: none;
