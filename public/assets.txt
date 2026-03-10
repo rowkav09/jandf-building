@@ -1,0 +1,7 @@
+This directory will contain all images, CSS, JS, and other assets from jandfbuilding.com.
+
+Example asset URLs to download and place here:
+- https://static.wixstatic.com/media/71cb50_503bdc9b0b2d4496b0ec5b428900ad28~mv2.jpeg
+- https://static.wixstatic.com/media/71cb50_8fe2ca24ed024133b87b5e5d69d9cd1b~mv2.png
+
+Download these files and place them in this directory as part of the site migration process.

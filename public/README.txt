@@ -1,0 +1,1 @@
+This directory will contain all images, CSS, JS, and other assets from jandfbuilding.com.
