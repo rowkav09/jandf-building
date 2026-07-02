@@ -196,15 +196,15 @@ body.about .nav-links {
   box-shadow: none !important;
   transition: height 0.2s;
 }
-/* About page: center hero text */
+/* About page: center hero text (taller stacked nav needs more clearance) */
 body.about .hero.hero-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   height: 50vh;
-  min-height: 400px;
-  padding-top: 40px;
+  min-height: 500px;
+  padding-top: 140px;
 }
 body.about .hero-page .hero-content {
   text-align: center;
@@ -375,6 +375,8 @@ body.about .hero-page .hero-content {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  /* keep content clear of the fixed header */
+  padding-top: 80px;
 }
 .hero-bg {
   position: absolute;
@@ -451,7 +453,7 @@ body.about .hero-page .hero-content {
 /* Page-level hero (shorter) */
 .hero-page {
   height: 50vh;
-  min-height: 400px;
+  min-height: 460px;
 }
 .hero-page .hero-content {
   text-align: center;
@@ -1364,6 +1366,9 @@ body.about .hero-page .hero-content {
     padding: 32px 24px;
     gap: 20px;
     border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  body.about .nav-links.open {
+    top: 120px;
   }
   .split { grid-template-columns: 1fr; gap: 40px; }
   .split-image { order: -1; }
