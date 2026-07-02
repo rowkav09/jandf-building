@@ -196,15 +196,11 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const btn = contactForm.querySelector('.btn');
       const originalText = btn.textContent;
-      btn.textContent = 'Message Sent!';
-      btn.style.background = '#4CAF50';
-      btn.style.borderColor = '#4CAF50';
+      btn.textContent = 'Enquiry received — we\'ll be in touch';
       setTimeout(() => {
         btn.textContent = originalText;
-        btn.style.background = '';
-        btn.style.borderColor = '';
         contactForm.reset();
-      }, 3000);
+      }, 3500);
     });
   }
 
