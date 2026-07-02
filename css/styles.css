@@ -1229,6 +1229,127 @@ body.about .hero-page .hero-content {
 }
 
 /* ============================================
+   WORK REEL (drifting portfolio strip)
+   ============================================ */
+.work-reel {
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+.work-reel-track {
+  display: flex;
+  width: max-content;
+  animation: work-reel-drift 75s linear infinite;
+  will-change: transform;
+}
+.work-reel:hover .work-reel-track,
+.work-reel:focus-within .work-reel-track {
+  animation-play-state: paused;
+}
+.work-reel-item {
+  position: relative;
+  flex: 0 0 auto;
+  width: 420px;
+  height: 300px;
+  margin-right: 24px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.work-reel-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-out);
+}
+.work-reel-item:hover img {
+  transform: scale(1.04);
+}
+.work-reel-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(28,26,23,0.55) 0%, transparent 45%);
+  opacity: 0;
+  transition: opacity 0.6s var(--ease-out);
+}
+.work-reel-item span {
+  position: absolute;
+  left: 22px; bottom: 18px;
+  z-index: 1;
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+.work-reel-item:hover::after { opacity: 1; }
+.work-reel-item:hover span { opacity: 1; transform: translateY(0); }
+@keyframes work-reel-drift {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (max-width: 600px) {
+  .work-reel-item { width: 280px; height: 200px; margin-right: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-reel-track { animation: none; }
+  .work-reel {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+/* ============================================
+   ENTRANCE & REVEAL CHOREOGRAPHY
+   ============================================ */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes hero-settle {
+  from { transform: scale(1.07); }
+  to   { transform: scale(1); }
+}
+.hero-bg img { animation: hero-settle 3.6s var(--ease-out) both; }
+.hero-badge   { animation: rise-in 0.9s var(--ease-out) 0.15s both; }
+.hero h1      { animation: rise-in 1.0s var(--ease-out) 0.30s both; }
+.hero p       { animation: rise-in 1.0s var(--ease-out) 0.45s both; }
+.hero-buttons { animation: rise-in 1.0s var(--ease-out) 0.60s both; }
+
+/* Hairline rule draws itself in as the header reveals */
+.section-header::after {
+  transition: transform 1.3s var(--ease-out) 0.4s;
+  transform-origin: center;
+}
+.section-header.fade-in::after { transform: scaleX(0); }
+.section-header.fade-in.visible::after { transform: scaleX(1); }
+
+/* Split-section imagery settles as it reveals */
+.split-image img { transition: transform 1.8s var(--ease-out); }
+.split-image.fade-in-left img,
+.split-image.fade-in-right img { transform: scale(1.06); }
+.split-image.visible img { transform: scale(1); }
+
+/* Lightbox: soft entrance, crossfading slides */
+@keyframes lightbox-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.lightbox.active { animation: lightbox-in 0.45s ease both; }
+.lightbox img { transition: opacity 0.35s ease; }
+
+/* Footer links ease sideways on hover */
+.footer ul a {
+  display: inline-block;
+  transition: color var(--transition), transform var(--transition);
+}
+.footer ul a:hover { transform: translateX(4px); }
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 992px) {

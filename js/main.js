@@ -31,6 +31,37 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
+  // --- Stat count-up (slow, settles with an ease-out) ---
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const statHeadings = document.querySelectorAll('.stat h3');
+  if (statHeadings.length && !prefersReducedMotion) {
+    const animateStat = (el) => {
+      const match = el.textContent.trim().match(/^([\d.]+)(.*)$/);
+      if (!match) return;
+      const target = parseFloat(match[1]);
+      const suffix = match[2] || '';
+      const decimals = (match[1].split('.')[1] || '').length;
+      const duration = 2000;
+      const start = performance.now();
+      const easeOut = t => 1 - Math.pow(1 - t, 3);
+      const tick = (now) => {
+        const p = Math.min(1, (now - start) / duration);
+        el.textContent = (target * easeOut(p)).toFixed(decimals) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateStat(entry.target);
+          statObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    statHeadings.forEach(el => statObserver.observe(el));
+  }
+
   // --- Navbar scroll effect ---
   const nav = document.querySelector('.nav');
   if (nav) {
@@ -97,8 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
           } else {
             card.style.opacity = '0';
-            card.style.transform = 'scale(0.95)';
-            setTimeout(() => { card.style.display = 'none'; }, 300);
+            card.style.transform = 'scale(0.97)';
+            setTimeout(() => { card.style.display = 'none'; }, 500);
           }
         });
       });
@@ -117,7 +148,18 @@ document.addEventListener('DOMContentLoaded', () => {
   function showGalleryImage(index) {
     if (!galleryImages.length) return;
     galleryIndex = index;
-    lightboxImg.src = galleryImages[galleryIndex];
+    const nextSrc = galleryImages[galleryIndex];
+    lightboxImg.style.opacity = '0';
+    const preload = new Image();
+    preload.onload = () => {
+      lightboxImg.src = nextSrc;
+      requestAnimationFrame(() => { lightboxImg.style.opacity = '1'; });
+    };
+    preload.onerror = () => {
+      lightboxImg.src = nextSrc;
+      lightboxImg.style.opacity = '1';
+    };
+    preload.src = nextSrc;
     if (lightboxCounter) {
       lightboxCounter.textContent = (galleryIndex + 1) + ' / ' + galleryImages.length;
     }
