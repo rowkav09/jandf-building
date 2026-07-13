@@ -1,51 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Selected Work | J&amp;F Building</title>
   <meta name="description" content="A selection of completed residential commissions by J&amp;F Building across Essex and London — extensions, refurbishments, joinery and specialist finishes.">
+  <meta name="theme-color" content="#1c1a17">
+  <link rel="canonical" href="https://rowkav09.github.io/jandf-building/projects.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="J&amp;F Building Ltd">
+  <meta property="og:title" content="Selected Work | J&amp;F Building">
+  <meta property="og:description" content="A selection of completed residential commissions across Essex and London.">
+  <meta property="og:url" content="https://rowkav09.github.io/jandf-building/projects.html">
+  <meta property="og:image" content="https://rowkav09.github.io/jandf-building/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Primary">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="img/logo-transparent.png" alt="J&amp;F Building Ltd">
+      <a href="index.html" class="nav-logo" aria-label="J&amp;F Building Ltd — home">
+        <img src="img/logo-transparent.png" alt="J&amp;F Building Ltd" width="944" height="388">
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="primary-nav">
         <a href="index.html">Home</a>
         <a href="projects.html" class="active">Projects</a>
         <a href="testimonials.html">Testimonials</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="tel:07527106062" class="nav-phone">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           07527 106062
         </a>
         <a href="contact.html" class="nav-cta interactive-cta">
           <span class="cta-btn-text">Discuss Your Project</span>
-          <span class="cta-btn-arrow">
+          <span class="cta-btn-arrow" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </span>
-          <span class="cta-btn-bg"></span>
         </a>
       </div>
-      <button class="nav-hamburger" aria-label="Toggle menu">
+      <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <main id="main">
+
   <!-- Page Hero -->
   <section class="hero hero-page">
     <div class="hero-bg">
-      <img src="img/project-office.jpg" alt="J&amp;F Building projects">
+      <img src="img/project-office.jpg" alt="" width="800" height="600" fetchpriority="high" decoding="async">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -58,98 +77,98 @@
   <!-- Filter & Gallery -->
   <section class="section">
     <div class="container">
-      <div class="filter-bar fade-in">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="office">Office &amp; Studios</button>
-        <button class="filter-btn" data-filter="roofing">Roofing</button>
-        <button class="filter-btn" data-filter="kitchens">Kitchens &amp; Bathrooms</button>
-        <button class="filter-btn" data-filter="plastering">Plastering</button>
-        <button class="filter-btn" data-filter="rendering">Rendering</button>
-        <button class="filter-btn" data-filter="carpentry">Carpentry</button>
-        <button class="filter-btn" data-filter="tiling">Tiling</button>
+      <div class="filter-bar fade-in" role="group" aria-label="Filter projects by trade">
+        <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter-btn" data-filter="office" aria-pressed="false">Office &amp; Studios</button>
+        <button type="button" class="filter-btn" data-filter="roofing" aria-pressed="false">Roofing</button>
+        <button type="button" class="filter-btn" data-filter="kitchens" aria-pressed="false">Kitchens &amp; Bathrooms</button>
+        <button type="button" class="filter-btn" data-filter="plastering" aria-pressed="false">Plastering</button>
+        <button type="button" class="filter-btn" data-filter="rendering" aria-pressed="false">Rendering</button>
+        <button type="button" class="filter-btn" data-filter="carpentry" aria-pressed="false">Carpentry</button>
+        <button type="button" class="filter-btn" data-filter="tiling" aria-pressed="false">Tiling</button>
       </div>
 
       <div class="projects-grid">
 
         <!-- Office / Garden Studios -->
-        <div class="project-card fade-in" data-category="office" data-gallery='["img/project-office.jpg","img/office-2.jpg","img/office-3.jpg","img/office-4.jpg","img/office-5.jpg","img/office-6.jpg","img/office-7.jpg"]'>
-          <img src="img/project-office.jpg" alt="Office fitout & garden studio project" loading="lazy">
+        <button type="button" class="project-card fade-in" data-category="office" aria-label="Garden Office, Buckhurst Hill — open gallery of 7 photos" data-gallery='["img/project-office.jpg","img/office-2.jpg","img/office-3.jpg","img/office-4.jpg","img/office-5.jpg","img/office-6.jpg","img/office-7.jpg"]'>
+          <img src="img/project-office.jpg" alt="" width="800" height="600" loading="lazy" decoding="async">
           <div class="project-card-overlay">
             <span>Outbuildings</span>
             <h3>Garden Office, Buckhurst Hill</h3>
             <small class="photo-count">7 photos</small>
           </div>
-        </div>
+        </button>
 
         <!-- Roofing -->
-        <div class="project-card fade-in" data-category="roofing" data-gallery='["img/project-roofing.jpg","img/project-roofing2.jpg","img/roofing-3.jpg","img/roofing-4.jpg","img/roofing-5.jpg","img/roofing-6.jpg"]'>
-          <img src="img/project-roofing.jpg" alt="Roofing project" loading="lazy">
+        <button type="button" class="project-card fade-in" data-category="roofing" aria-label="Pitched Roof Renewal, London — open gallery of 6 photos" data-gallery='["img/project-roofing.jpg","img/project-roofing2.jpg","img/roofing-3.jpg","img/roofing-4.jpg","img/roofing-5.jpg","img/roofing-6.jpg"]'>
+          <img src="img/project-roofing.jpg" alt="" width="800" height="600" loading="lazy" decoding="async">
           <div class="project-card-overlay">
             <span>Roofing</span>
             <h3>Pitched Roof Renewal, London</h3>
             <small class="photo-count">6 photos</small>
           </div>
-        </div>
+        </button>
 
         <!-- Kitchens -->
-        <div class="project-card fade-in" data-category="kitchens" data-gallery='["img/hero-kitchen.jpg","img/kitchen-3.jpg","img/kitchen-4.jpg","img/kitchen-5.jpg","img/kitchen-6.jpg","img/kitchen-7.jpg"]'>
-          <img src="img/hero-kitchen.jpg" alt="Kitchen renovation project" loading="lazy">
+        <button type="button" class="project-card fade-in" data-category="kitchens" aria-label="Kitchen Refurbishment, East London — open gallery of 6 photos" data-gallery='["img/hero-kitchen.jpg","img/kitchen-3.jpg","img/kitchen-4.jpg","img/kitchen-5.jpg","img/kitchen-6.jpg","img/kitchen-7.jpg"]'>
+          <img src="img/hero-kitchen.jpg" alt="" width="800" height="1067" loading="lazy" decoding="async">
           <div class="project-card-overlay">
             <span>Interiors</span>
             <h3>Kitchen Refurbishment, East London</h3>
             <small class="photo-count">6 photos</small>
           </div>
-        </div>
+        </button>
 
         <!-- Bathrooms -->
-        <div class="project-card fade-in" data-category="kitchens" data-gallery='["img/project-bathroom.jpg","img/bathroom-2.jpg","img/bathroom-3.jpg","img/bathroom-4.jpg","img/bathroom-5.jpg","img/bathroom-6.jpg"]'>
-          <img src="img/project-bathroom.jpg" alt="Bathroom renovation project" loading="lazy">
+        <button type="button" class="project-card fade-in" data-category="kitchens" aria-label="Bathroom Refurbishment, Essex — open gallery of 6 photos" data-gallery='["img/project-bathroom.jpg","img/bathroom-2.jpg","img/bathroom-3.jpg","img/bathroom-4.jpg","img/bathroom-5.jpg","img/bathroom-6.jpg"]'>
+          <img src="img/project-bathroom.jpg" alt="" width="800" height="600" loading="lazy" decoding="async">
           <div class="project-card-overlay">
             <span>Interiors</span>
             <h3>Bathroom Refurbishment, Essex</h3>
             <small class="photo-count">6 photos</small>
           </div>
-        </div>
+        </button>
 
         <!-- Plastering -->
-        <div class="project-card fade-in" data-category="plastering" data-gallery='["img/project-plastering.jpg","img/plastering-2.jpg","img/plastering-3.jpg","img/plastering-4.jpg","img/plastering-5.jpg","img/plastering-6.jpg","img/plastering-7.jpg"]'>
-          <img src="img/project-plastering.jpg" alt="Plastering project" loading="lazy">
+        <button type="button" class="project-card fade-in" data-category="plastering" aria-label="Plaster and Skim Finishes — open gallery of 7 photos" data-gallery='["img/project-plastering.jpg","img/plastering-2.jpg","img/plastering-3.jpg","img/plastering-4.jpg","img/plastering-5.jpg","img/plastering-6.jpg","img/plastering-7.jpg"]'>
+          <img src="img/project-plastering.jpg" alt="" width="800" height="600" loading="lazy" decoding="async">
           <div class="project-card-overlay">
             <span>Finishes</span>
             <h3>Plaster &amp; Skim Finishes</h3>
             <small class="photo-count">7 photos</small>
           </div>
-        </div>
+        </button>
 
         <!-- Rendering -->
-        <div class="project-card fade-in" data-category="rendering" data-gallery='["img/project-rendering.jpg","img/rendering-2.jpg","img/rendering-3.jpg","img/rendering-4.jpg","img/rendering-5.jpg"]'>
-          <img src="img/project-rendering.jpg" alt="Rendering project" loading="lazy">
+        <button type="button" class="project-card fade-in" data-category="rendering" aria-label="External Render and Façade Work — open gallery of 5 photos" data-gallery='["img/project-rendering.jpg","img/rendering-2.jpg","img/rendering-3.jpg","img/rendering-4.jpg","img/rendering-5.jpg"]'>
+          <img src="img/project-rendering.jpg" alt="" width="800" height="600" loading="lazy" decoding="async">
           <div class="project-card-overlay">
             <span>Externals</span>
             <h3>External Render &amp; Façade Work</h3>
             <small class="photo-count">5 photos</small>
           </div>
-        </div>
+        </button>
 
         <!-- Carpentry -->
-        <div class="project-card fade-in" data-category="carpentry" data-gallery='["img/project-carpentry.jpg","img/project-carpentry2.jpg","img/carpentry-3.jpg","img/carpentry-4.jpg","img/carpentry-5.jpg","img/carpentry-6.jpg","img/carpentry-7.jpg","img/carpentry-8.jpg","img/carpentry-9.jpg"]'>
-          <img src="img/project-carpentry.jpg" alt="Carpentry project" loading="lazy">
+        <button type="button" class="project-card fade-in" data-category="carpentry" aria-label="Bespoke Carpentry and Joinery — open gallery of 9 photos" data-gallery='["img/project-carpentry.jpg","img/project-carpentry2.jpg","img/carpentry-3.jpg","img/carpentry-4.jpg","img/carpentry-5.jpg","img/carpentry-6.jpg","img/carpentry-7.jpg","img/carpentry-8.jpg","img/carpentry-9.jpg"]'>
+          <img src="img/project-carpentry.jpg" alt="" width="800" height="600" loading="lazy" decoding="async">
           <div class="project-card-overlay">
             <span>Joinery</span>
             <h3>Bespoke Carpentry &amp; Joinery</h3>
             <small class="photo-count">9 photos</small>
           </div>
-        </div>
+        </button>
 
         <!-- Tiling -->
-        <div class="project-card fade-in" data-category="tiling" data-gallery='["img/project-tiling.jpg","img/tiling-2.jpg","img/tiling-3.jpg","img/tiling-4.jpg","img/tiling-5.jpg"]'>
-          <img src="img/project-tiling.jpg" alt="Tiling project" loading="lazy">
+        <button type="button" class="project-card fade-in" data-category="tiling" aria-label="Tiling and Setting Out — open gallery of 5 photos" data-gallery='["img/project-tiling.jpg","img/tiling-2.jpg","img/tiling-3.jpg","img/tiling-4.jpg","img/tiling-5.jpg"]'>
+          <img src="img/project-tiling.jpg" alt="" width="800" height="600" loading="lazy" decoding="async">
           <div class="project-card-overlay">
             <span>Surfaces</span>
             <h3>Tiling &amp; Setting Out</h3>
             <small class="photo-count">5 photos</small>
           </div>
-        </div>
+        </button>
 
       </div>
 
@@ -161,16 +180,20 @@
     <div class="container fade-in">
       <h2>Have Something Similar in Mind?</h2>
       <p>We're happy to talk through comparable projects, materials and approach — and to arrange visits to completed work where our clients allow it.</p>
-      <a href="contact.html" class="btn btn-primary">Discuss Your Project</a>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">Discuss Your Project</a>
+      </div>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="img/logo-transparent.png" alt="J&amp;F Building Ltd">
+          <img src="img/logo-transparent.png" alt="J&amp;F Building Ltd" width="944" height="388" loading="lazy">
           <p>A principal-led building firm undertaking considered residential work across Essex and London. We work alongside architects and interior designers; references available on request.</p>
         </div>
         <div>
@@ -186,11 +209,11 @@
         <div>
           <h4>Services</h4>
           <ul>
-            <li><a href="projects.html">Full Refurbishments</a></li>
-            <li><a href="projects.html">Extensions</a></li>
-            <li><a href="projects.html">Kitchens &amp; Bathrooms</a></li>
-            <li><a href="projects.html">Bespoke Carpentry</a></li>
-            <li><a href="projects.html">Roofing</a></li>
+            <li><a href="projects.html?filter=rendering">Full Refurbishments</a></li>
+            <li><a href="projects.html?filter=plastering">Extensions</a></li>
+            <li><a href="projects.html?filter=kitchens">Kitchens &amp; Bathrooms</a></li>
+            <li><a href="projects.html?filter=carpentry">Bespoke Carpentry</a></li>
+            <li><a href="projects.html?filter=roofing">Roofing</a></li>
           </ul>
         </div>
         <div>
@@ -207,24 +230,38 @@
       <div class="footer-bottom">
         <p>&copy; 2026 J&amp;F Building Ltd. All rights reserved.</p>
         <div class="footer-social">
-          <a href="https://www.instagram.com/jnf_buildersltd" target="_blank" rel="noopener" aria-label="Instagram">
-            <img src="img/instagram.svg" alt="Instagram" style="width:22px;height:22px;" />
+          <a href="https://www.instagram.com/jnf_buildersltd" target="_blank" rel="noopener" aria-label="J&amp;F Building on Instagram">
+            <img src="img/instagram.svg" alt="" width="20" height="20" loading="lazy">
           </a>
-          <a href="https://www.tiktok.com/@jf.builderz" target="_blank" rel="noopener" aria-label="TikTok">
-            <img src="img/tiktok.svg" alt="TikTok" style="width:22px;height:22px;" />
+          <a href="https://www.tiktok.com/@jf.builderz" target="_blank" rel="noopener" aria-label="J&amp;F Building on TikTok">
+            <img src="img/tiktok.svg" alt="" width="20" height="20" loading="lazy">
           </a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Mobile call bar -->
+  <div class="call-bar">
+    <a href="tel:07527106062" class="call-bar-phone">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Jack
+    </a>
+    <a href="contact.html" class="call-bar-enquire">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+      Enquire
+    </a>
+  </div>
+
   <!-- Lightbox -->
-  <div class="lightbox">
-    <button class="lightbox-close" aria-label="Close">&times;</button>
-    <button class="lightbox-prev" aria-label="Previous">&#8249;</button>
-    <img src="" alt="">
-    <button class="lightbox-next" aria-label="Next">&#8250;</button>
-    <div class="lightbox-counter"></div>
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Project photo gallery" aria-hidden="true">
+    <button type="button" class="lightbox-close" aria-label="Close gallery">&times;</button>
+    <div class="lightbox-figure">
+      <img src="" alt="">
+    </div>
+    <button type="button" class="lightbox-prev" aria-label="Previous photo">&#8249;</button>
+    <button type="button" class="lightbox-next" aria-label="Next photo">&#8250;</button>
+    <div class="lightbox-counter" aria-live="polite"></div>
   </div>
 
   <script src="js/main.js"></script>

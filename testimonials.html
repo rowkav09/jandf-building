@@ -1,51 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Client References | J&amp;F Building</title>
   <meta name="description" content="Words from J&amp;F Building's clients across Essex and London. Further references, and visits to completed work, can be arranged on request.">
+  <meta name="theme-color" content="#1c1a17">
+  <link rel="canonical" href="https://rowkav09.github.io/jandf-building/testimonials.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="J&amp;F Building Ltd">
+  <meta property="og:title" content="Client References | J&amp;F Building">
+  <meta property="og:description" content="Unedited words from recent clients across Essex and London.">
+  <meta property="og:url" content="https://rowkav09.github.io/jandf-building/testimonials.html">
+  <meta property="og:image" content="https://rowkav09.github.io/jandf-building/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Primary">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="img/logo-transparent.png" alt="J&amp;F Building Ltd">
+      <a href="index.html" class="nav-logo" aria-label="J&amp;F Building Ltd — home">
+        <img src="img/logo-transparent.png" alt="J&amp;F Building Ltd" width="944" height="388">
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="primary-nav">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="testimonials.html" class="active">Testimonials</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="tel:07527106062" class="nav-phone">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           07527 106062
         </a>
         <a href="contact.html" class="nav-cta interactive-cta">
           <span class="cta-btn-text">Discuss Your Project</span>
-          <span class="cta-btn-arrow">
+          <span class="cta-btn-arrow" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </span>
-          <span class="cta-btn-bg"></span>
         </a>
       </div>
-      <button class="nav-hamburger" aria-label="Toggle menu">
+      <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <main id="main">
+
   <!-- Page Hero -->
   <section class="hero hero-page">
     <div class="hero-bg">
-      <img src="img/project-carpentry.jpg" alt="Client testimonials">
+      <img src="img/project-carpentry.jpg" alt="" width="800" height="600" fetchpriority="high" decoding="async">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -61,10 +80,10 @@
       <div class="testimonials-grid">
 
         <div class="testimonial-card fade-in">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote>"Jack is very professional. Communicates frequently in terms of when arriving etc. Very punctual. Plastered our garage conversion. Works long hours. Highly recommended."</blockquote>
           <div class="author">
-            <div class="author-avatar">MB</div>
+            <div class="author-avatar" aria-hidden="true">MB</div>
             <div class="author-info">
               <h4>Mark Brett</h4>
               <span>Garage Conversion — Essex</span>
@@ -73,10 +92,10 @@
         </div>
 
         <div class="testimonial-card fade-in">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote>"Fantastic job on our kitchen renovation. The attention to detail was second to none and they finished on time and within budget. Would use again without hesitation."</blockquote>
           <div class="author">
-            <div class="author-avatar">SH</div>
+            <div class="author-avatar" aria-hidden="true">SH</div>
             <div class="author-info">
               <h4>Sarah H.</h4>
               <span>Kitchen Renovation — East London</span>
@@ -85,10 +104,10 @@
         </div>
 
         <div class="testimonial-card fade-in">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote>"J&amp;F built our garden office from scratch. Superb quality throughout — from the foundations to the finishing touches. Couldn't be happier with the result."</blockquote>
           <div class="author">
-            <div class="author-avatar">DT</div>
+            <div class="author-avatar" aria-hidden="true">DT</div>
             <div class="author-info">
               <h4>David T.</h4>
               <span>Garden Studio Build — Buckhurst Hill</span>
@@ -97,10 +116,10 @@
         </div>
 
         <div class="testimonial-card fade-in">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote>"Had them out for a full bathroom refit — new tiling, plastering, plumbing, the works. Everything was done to a very high standard. Really pleased with how it turned out."</blockquote>
           <div class="author">
-            <div class="author-avatar">RJ</div>
+            <div class="author-avatar" aria-hidden="true">RJ</div>
             <div class="author-info">
               <h4>Rachel J.</h4>
               <span>Bathroom Refit — Essex</span>
@@ -109,10 +128,10 @@
         </div>
 
         <div class="testimonial-card fade-in">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote>"Had some roofing work done that I'd been putting off for years. Jack and Finley sorted it quickly and at a fair price. Very clean workers too — left the place spotless."</blockquote>
           <div class="author">
-            <div class="author-avatar">PW</div>
+            <div class="author-avatar" aria-hidden="true">PW</div>
             <div class="author-info">
               <h4>Paul W.</h4>
               <span>Roofing — London</span>
@@ -121,10 +140,10 @@
         </div>
 
         <div class="testimonial-card fade-in">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote>"We used J&amp;F for a rear extension and it's completely transformed our home. Professional from start to finish — kept us updated at every stage. Brilliant lads."</blockquote>
           <div class="author">
-            <div class="author-avatar">LM</div>
+            <div class="author-avatar" aria-hidden="true">LM</div>
             <div class="author-info">
               <h4>Lisa M.</h4>
               <span>Rear Extension — Loughton</span>
@@ -141,16 +160,20 @@
     <div class="container fade-in">
       <h2>References Available on Request</h2>
       <p>We're glad to put prospective clients in touch with past ones — and, where our clients allow it, to arrange a visit to completed work.</p>
-      <a href="contact.html" class="btn btn-primary">Arrange a Consultation</a>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">Arrange a Consultation</a>
+      </div>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="img/logo-transparent.png" alt="J&amp;F Building Ltd">
+          <img src="img/logo-transparent.png" alt="J&amp;F Building Ltd" width="944" height="388" loading="lazy">
           <p>A principal-led building firm undertaking considered residential work across Essex and London. We work alongside architects and interior designers; references available on request.</p>
         </div>
         <div>
@@ -166,11 +189,11 @@
         <div>
           <h4>Services</h4>
           <ul>
-            <li><a href="projects.html">Full Refurbishments</a></li>
-            <li><a href="projects.html">Extensions</a></li>
-            <li><a href="projects.html">Kitchens &amp; Bathrooms</a></li>
-            <li><a href="projects.html">Bespoke Carpentry</a></li>
-            <li><a href="projects.html">Roofing</a></li>
+            <li><a href="projects.html?filter=rendering">Full Refurbishments</a></li>
+            <li><a href="projects.html?filter=plastering">Extensions</a></li>
+            <li><a href="projects.html?filter=kitchens">Kitchens &amp; Bathrooms</a></li>
+            <li><a href="projects.html?filter=carpentry">Bespoke Carpentry</a></li>
+            <li><a href="projects.html?filter=roofing">Roofing</a></li>
           </ul>
         </div>
         <div>
@@ -187,16 +210,28 @@
       <div class="footer-bottom">
         <p>&copy; 2026 J&amp;F Building Ltd. All rights reserved.</p>
         <div class="footer-social">
-          <a href="https://www.instagram.com/jnf_buildersltd" target="_blank" rel="noopener" aria-label="Instagram">
-            <img src="img/instagram.svg" alt="Instagram" style="width:22px;height:22px;" />
+          <a href="https://www.instagram.com/jnf_buildersltd" target="_blank" rel="noopener" aria-label="J&amp;F Building on Instagram">
+            <img src="img/instagram.svg" alt="" width="20" height="20" loading="lazy">
           </a>
-          <a href="https://www.tiktok.com/@jf.builderz" target="_blank" rel="noopener" aria-label="TikTok">
-            <img src="img/tiktok.svg" alt="TikTok" style="width:22px;height:22px;" />
+          <a href="https://www.tiktok.com/@jf.builderz" target="_blank" rel="noopener" aria-label="J&amp;F Building on TikTok">
+            <img src="img/tiktok.svg" alt="" width="20" height="20" loading="lazy">
           </a>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Mobile call bar -->
+  <div class="call-bar">
+    <a href="tel:07527106062" class="call-bar-phone">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Jack
+    </a>
+    <a href="contact.html" class="call-bar-enquire">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+      Enquire
+    </a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

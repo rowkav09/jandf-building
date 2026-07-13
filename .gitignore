@@ -1,0 +1,7 @@
+.venv/
+
+# Pristine, full-resolution source photographs. Kept locally so images can be
+# re-derived at other sizes; excluded from the repo and the deployed site
+# because they total ~38 MB. The same files also remain in git history at
+# their original img/*.jpg paths (commit ec0a58e and earlier).
+img/_originals/

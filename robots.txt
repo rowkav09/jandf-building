@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /img/_originals/
+
+Sitemap: https://rowkav09.github.io/jandf-building/sitemap.xml
